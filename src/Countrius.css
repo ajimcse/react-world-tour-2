@@ -1,11 +1,22 @@
 .country-container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
 }
-.countrius-list{
-   border: 2px solid;
-   padding: 15px;
-   margin: 10px;
-   border-radius: 10px;
+.visited-countries {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.countrius-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border: 2px solid;
+  padding: 15px;
+  border-radius: 10px;
+  width: 180px;
+  box-sizing: border-box;
 }

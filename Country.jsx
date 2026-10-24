@@ -1,5 +1,8 @@
 import { useState } from "react";
-import "./Country.css"
+import "./Country.css";
+import "./Visited"
+ 
+
 const Country = ({country, handleVisitedCountry}) => {
     const {name, flag,iso3} = country;
     const [visited, setVisited] = useState(false);
@@ -25,7 +28,9 @@ const Country = ({country, handleVisitedCountry}) => {
         {
             visited ?'Ami Guri Ai Country': 'Ami Akhno Guri nai'
         }
+  
         </div>
+        
     );
 };
 
