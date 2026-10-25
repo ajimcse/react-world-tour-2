@@ -6,7 +6,7 @@ import "./Countrius.css";
 const Countries = () => {
   const [countries, setCountries] = useState([]);
   const [visitedCountry, setVisitedCountry] = useState([]);
-  const [visited, setVisitedFlage]= useState([])
+  const [visitedFlag, setVisitedFlage]= useState([])
   const handleVisitedCountry = (country) => {
     const alreadyVisited = visitedCountry.some(
       item => item.iso2 === country.iso2
@@ -18,7 +18,8 @@ const Countries = () => {
   };
 
   const handleVisitedFlage = flag =>{
-    console.log('flag Adding')
+   const newVisitedFalgs =[...visitedFlag, flag]
+   setVisitedFlage(newVisitedFalgs)
   }
   useEffect(() => {
     fetch("https://flagdex.net/api/v1/countries-lite.json")
@@ -43,6 +44,12 @@ const Countries = () => {
           />
         ))}
       </div>
+      <div>
+    <h4>Visited Flag</h4>
+    {
+        visitedFlag.map(flag=> <img src={flag}></img>)
+    }
+  </div>
     </div>
   );
 };

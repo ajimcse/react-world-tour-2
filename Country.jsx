@@ -30,6 +30,7 @@ const Country = ({country, handleVisitedCountry, handleVisitedFlage}) => {
             visited ?'Ami Guri Ai Country': 'Ami Akhno Guri nai'
         }
   
+ 
         </div>
         
     );
