@@ -3,7 +3,7 @@ import "./Country.css";
 import "./Visited"
  
 
-const Country = ({country, handleVisitedCountry}) => {
+const Country = ({country, handleVisitedCountry, handleVisitedFlage}) => {
     const {name, flag,iso3} = country;
     const [visited, setVisited] = useState(false);
 
@@ -25,6 +25,7 @@ const Country = ({country, handleVisitedCountry}) => {
       <button onClick={() =>handleVisitedCountry(country)}>
         Mark Visited
       </button>
+      <button onClick={() =>handleVisitedFlage(country.flag)}>Add Flag</button>
         {
             visited ?'Ami Guri Ai Country': 'Ami Akhno Guri nai'
         }

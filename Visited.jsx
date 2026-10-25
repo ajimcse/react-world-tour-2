@@ -9,7 +9,6 @@ const Visited = ({ visitedCountry = [] }) => {
         {visitedCountry.map(country => (
           <div className="visited-card" key={country.iso2}>
             <h3>{country.name}</h3>
-
             <img
               src={`https://flagcdn.com/w80/${country.iso2.toLowerCase()}.png`}
               alt={country.name}
